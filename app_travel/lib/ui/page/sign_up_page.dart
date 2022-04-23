@@ -156,7 +156,9 @@ class SignUpPage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(defaultRadius),
                   )),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/bonus');
+              },
               child: Text(
                 "Get Started",
                 style:
