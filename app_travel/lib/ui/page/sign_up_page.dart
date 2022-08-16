@@ -1,5 +1,6 @@
 import 'package:app_travel/shared/theme.dart';
 import 'package:app_travel/ui/widgets/custom_button.dart';
+import 'package:app_travel/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -19,130 +20,31 @@ class SignUpPage extends StatelessWidget {
 
     Widget inputSection() {
       Widget fullNameInput() {
-        return Container(
-          width: double.infinity,
-          height: 82,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Full Name",
-                style: blackTextStyle,
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "Your Full Name",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                          borderSide: BorderSide(color: kPrimaryColor))),
-                ),
-              ),
-            ],
-          ),
+        return CustomTextFormField(
+          title: "FullName",
+          hintText: "Your Full Name",
         );
       }
 
       Widget emailInput() {
-        return Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: double.infinity,
-          height: 82,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Email Address",
-                style: blackTextStyle,
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "Your Email",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                          borderSide: BorderSide(color: kPrimaryColor))),
-                ),
-              ),
-            ],
-          ),
+        return CustomTextFormField(
+          title: "Email Address",
+          hintText: "Your Full Name",
         );
       }
 
       Widget passwordInput() {
-        return Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: double.infinity,
-          height: 82,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Password",
-                style: blackTextStyle,
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              Expanded(
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: "Your Password",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                          borderSide: BorderSide(color: kPrimaryColor))),
-                ),
-              ),
-            ],
-          ),
+        return CustomTextFormField(
+          obscureText: true,
+          title: "Password",
+          hintText: "Your Full Name",
         );
       }
 
       Widget hobbyInput() {
-        return Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: double.infinity,
-          height: 82,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Hobby",
-                style: blackTextStyle,
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "Your Hobby",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                          borderSide: BorderSide(color: kPrimaryColor))),
-                ),
-              ),
-            ],
-          ),
+        return CustomTextFormField(
+          title: "Hobby",
+          hintText: "Your Hobby",
         );
       }
 
