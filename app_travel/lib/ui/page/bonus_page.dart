@@ -12,11 +12,12 @@ class BonusPage extends StatelessWidget {
         height: 211,
         padding: EdgeInsets.all(defaultMargin),
         decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/image_card.png")),
+            image: const DecorationImage(
+                image: const AssetImage("assets/image_card.png")),
             boxShadow: [
               BoxShadow(
                 color: kPrimaryColor.withOpacity(0.5),
-                offset: Offset(0, 11),
+                offset: const Offset(0, 11),
                 blurRadius: 50,
               )
             ]),
@@ -45,7 +46,7 @@ class BonusPage extends StatelessWidget {
                   "assets/icon_plane.png",
                   width: 24,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Text(
@@ -55,7 +56,7 @@ class BonusPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 41,
             ),
             Text(
@@ -73,7 +74,7 @@ class BonusPage extends StatelessWidget {
 
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 80),
+        margin: const EdgeInsets.only(top: 80),
         child: Text(
           "Big Bonus 🎉",
           style: blackTextStyle.copyWith(fontSize: 32, fontWeight: semiBold),
@@ -83,7 +84,7 @@ class BonusPage extends StatelessWidget {
 
     Widget subtitle() {
       return Container(
-        margin: EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 10),
         child: Text(
           "We give you early credit so that\nyou can buy a flight ticket",
           style: greyTextStyle.copyWith(fontSize: 16, fontWeight: light),
@@ -94,7 +95,7 @@ class BonusPage extends StatelessWidget {
 
     Widget startButton() {
       return Container(
-        margin: EdgeInsets.only(top: 50),
+        margin: const EdgeInsets.only(top: 50),
         width: 220,
         height: 55,
         child: TextButton(
@@ -103,7 +104,9 @@ class BonusPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(defaultRadius),
                 )),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/main-page');
+            },
             child: Text(
               "Start Fly Now",
               style: whiteTextStyle.copyWith(fontSize: 18, fontWeight: medium),

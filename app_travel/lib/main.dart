@@ -1,5 +1,6 @@
 import 'package:app_travel/ui/page/bonus_page.dart';
 import 'package:app_travel/ui/page/get_started.dart';
+import 'package:app_travel/ui/page/main_page.dart';
 import 'package:app_travel/ui/page/sign_up_page.dart';
 import 'package:app_travel/ui/page/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => SplashPage(),
+        '/': (context) => const SplashPage(),
         '/get-started': (context) => GetStarted(),
-        '/sign-up': (context) => SignUpPage(),
-        '/bonus': (context) => BonusPage(),
+        '/sign-up': (context) => const SignUpPage(),
+        '/bonus': (context) => const BonusPage(),
+        '/main-page': (context) => MainPage()
       },
     );
   }

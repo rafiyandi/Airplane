@@ -8,7 +8,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 30),
         child: Text(
           "Join us and get\nyour next journey",
           style: blackTextStyle.copyWith(fontSize: 24, fontWeight: semiBold),
@@ -28,7 +28,7 @@ class SignUpPage extends StatelessWidget {
                 "Full Name",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -50,7 +50,7 @@ class SignUpPage extends StatelessWidget {
 
       Widget emailInput() {
         return Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           width: double.infinity,
           height: 82,
           child: Column(
@@ -60,7 +60,7 @@ class SignUpPage extends StatelessWidget {
                 "Email Address",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -82,7 +82,7 @@ class SignUpPage extends StatelessWidget {
 
       Widget passwordInput() {
         return Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           width: double.infinity,
           height: 82,
           child: Column(
@@ -92,7 +92,7 @@ class SignUpPage extends StatelessWidget {
                 "Password",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -115,7 +115,7 @@ class SignUpPage extends StatelessWidget {
 
       Widget hobbyInput() {
         return Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           width: double.infinity,
           height: 82,
           child: Column(
@@ -125,7 +125,7 @@ class SignUpPage extends StatelessWidget {
                 "Hobby",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -147,7 +147,7 @@ class SignUpPage extends StatelessWidget {
 
       Widget submitButton() {
         return Container(
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
           width: double.infinity,
           height: 55,
           child: TextButton(
@@ -168,8 +168,8 @@ class SignUpPage extends StatelessWidget {
       }
 
       return Container(
-        margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         decoration: BoxDecoration(
           color: kWhiteColor,
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -189,7 +189,7 @@ class SignUpPage extends StatelessWidget {
     Widget tcButton() {
       return Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.only(top: 50, bottom: 73),
+        margin: const EdgeInsets.only(top: 50, bottom: 73),
         child: Text(
           "Terms and Conditions",
           style: greyTextStyle.copyWith(fontSize: 16, fontWeight: light),

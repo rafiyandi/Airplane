@@ -10,9 +10,9 @@ class GetStarted extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/image_get_started.png"),
+                  image: const AssetImage("assets/image_get_started.png"),
                   fit: BoxFit.cover),
             ),
           ),
@@ -34,7 +34,7 @@ class GetStarted extends StatelessWidget {
                 Container(
                   width: 220,
                   height: 55,
-                  margin: EdgeInsets.only(top: 50, bottom: 80),
+                  margin: const EdgeInsets.only(top: 50, bottom: 80),
                   child: TextButton(
                       style: TextButton.styleFrom(
                           backgroundColor: kPrimaryColor,

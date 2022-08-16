@@ -8,7 +8,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 30),
         child: Text(
           "Sign\nContinue",
           style: blackTextStyle.copyWith(fontSize: 24, fontWeight: semiBold),
@@ -19,7 +19,7 @@ class SignInPage extends StatelessWidget {
     Widget inputSection() {
       Widget emailInput() {
         return Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           width: double.infinity,
           height: 82,
           child: Column(
@@ -29,7 +29,7 @@ class SignInPage extends StatelessWidget {
                 "Email Address",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -51,7 +51,7 @@ class SignInPage extends StatelessWidget {
 
       Widget passwordInput() {
         return Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           width: double.infinity,
           height: 82,
           child: Column(
@@ -61,7 +61,7 @@ class SignInPage extends StatelessWidget {
                 "Password",
                 style: blackTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               Expanded(
@@ -84,7 +84,7 @@ class SignInPage extends StatelessWidget {
 
       Widget submitButton() {
         return Container(
-          margin: EdgeInsets.only(top: 30),
+          margin: const EdgeInsets.only(top: 30),
           width: double.infinity,
           height: 55,
           child: TextButton(
@@ -105,8 +105,8 @@ class SignInPage extends StatelessWidget {
       }
 
       return Container(
-        margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         decoration: BoxDecoration(
           color: kWhiteColor,
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -126,7 +126,7 @@ class SignInPage extends StatelessWidget {
     Widget tcButton() {
       return Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.only(top: 50, bottom: 73),
+        margin: const EdgeInsets.only(top: 50, bottom: 73),
         child: Text(
           "Terms and Conditions",
           style: greyTextStyle.copyWith(fontSize: 16, fontWeight: light),
