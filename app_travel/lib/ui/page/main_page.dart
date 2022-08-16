@@ -1,5 +1,5 @@
 import 'package:app_travel/shared/theme.dart';
-import 'package:app_travel/ui/widgets/custom_bottom_navigation_item.dart';
+import 'package:app_travel/ui/widgets/custom_botton_navigation_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
