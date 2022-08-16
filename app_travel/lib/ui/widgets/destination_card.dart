@@ -2,13 +2,13 @@ import 'package:app_travel/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class DestinationCard extends StatelessWidget {
-  const DestinationCard(
-      {Key? key,
-      this.rating = 0.0,
-      required this.imageUrl,
-      required this.city,
-      required this.name})
-      : super(key: key);
+  const DestinationCard({
+    Key? key,
+    this.rating = 0.0,
+    required this.imageUrl,
+    required this.name,
+    required this.city,
+  }) : super(key: key);
   final double rating;
   final String imageUrl;
   final String name;
