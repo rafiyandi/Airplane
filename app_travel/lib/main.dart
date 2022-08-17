@@ -1,4 +1,5 @@
 import 'package:app_travel/ui/page/bonus_page.dart';
+import 'package:app_travel/ui/page/detail_page.dart';
 import 'package:app_travel/ui/page/get_started.dart';
 import 'package:app_travel/ui/page/main_page.dart';
 import 'package:app_travel/ui/page/sign_up_page.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         '/get-started': (context) => GetStarted(),
         '/sign-up': (context) => const SignUpPage(),
         '/bonus': (context) => const BonusPage(),
-        '/main-page': (context) => MainPage()
+        '/main-page': (context) => MainPage(),
+        '/detail': (context) => DetailPage()
       },
     );
   }
