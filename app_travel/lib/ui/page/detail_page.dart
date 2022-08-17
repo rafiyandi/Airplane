@@ -1,4 +1,7 @@
 import 'package:app_travel/shared/theme.dart';
+import 'package:app_travel/ui/widgets/custom_button.dart';
+import 'package:app_travel/ui/widgets/interest_item.dart';
+import 'package:app_travel/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -66,11 +69,13 @@ class DetailPage extends StatelessWidget {
                       children: [
                         Text(
                           "Lake Ciliwung",
+                          overflow: TextOverflow.ellipsis,
                           style: whiteTextStyle.copyWith(
                               fontSize: 24, fontWeight: semiBold),
                         ),
                         Text(
                           "Lake Ciliwung",
+                          overflow: TextOverflow.ellipsis,
                           style: whiteTextStyle.copyWith(
                               fontSize: 16, fontWeight: light),
                         ),
@@ -98,6 +103,110 @@ class DetailPage extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+
+            //NOTE:ABOUT, PHOTO, INTEREST
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: kWhiteColor, borderRadius: BorderRadius.circular(18)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //NOTE:About
+                  Text(
+                    "About",
+                    style: blackTextStyle.copyWith(
+                        fontSize: 16, fontWeight: semiBold),
+                  ),
+                  SizedBox(height: 6),
+                  Text(
+                    "Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.",
+                    style: blackTextStyle.copyWith(height: 2),
+                  ),
+                  SizedBox(height: 20),
+                  //NOTE:Photos
+                  Text(
+                    "Photos",
+                    style: blackTextStyle.copyWith(
+                        fontSize: 16, fontWeight: semiBold),
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    children: [
+                      PhotoItem(imgUrl: "assets/image_photo1.png"),
+                      PhotoItem(imgUrl: "assets/image_photo2.png"),
+                      PhotoItem(imgUrl: "assets/image_photo3.png"),
+                    ],
+                  ),
+                  //NOTE:INTEREST
+                  SizedBox(height: 20),
+                  Text(
+                    "Interests",
+                    style: blackTextStyle.copyWith(
+                        fontSize: 16, fontWeight: semiBold),
+                  ),
+                  SizedBox(height: 10),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          InterestItem(
+                            text: "Kids Park",
+                          ),
+                          InterestItem(
+                            text: "Kids Park",
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          InterestItem(
+                            text: "Kids Park",
+                          ),
+                          InterestItem(
+                            text: "Kids Park",
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            //NOTE:BOOK, BUTTON
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "IDR 2.500.000",
+                          style: blackTextStyle.copyWith(
+                              fontSize: 18, fontWeight: semiBold),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "per orang",
+                          style: greyTextStyle.copyWith(fontWeight: light),
+                        ),
+                      ],
+                    ),
+                  ),
+                  CustomButton(
+                    onPressed: () {},
+                    title: "Book Now",
+                    width: 170,
+                  )
+                ],
+              ),
             )
           ],
         ),
@@ -105,12 +214,14 @@ class DetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Stack(
-        children: [
-          backgroundImage(),
-          customShadow(),
-          content(),
-        ],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            backgroundImage(),
+            customShadow(),
+            content(),
+          ],
+        ),
       ),
     );
   }
