@@ -1,4 +1,5 @@
 import 'package:app_travel/shared/theme.dart';
+import 'package:app_travel/ui/widgets/seat_item.dart';
 import 'package:flutter/material.dart';
 
 class ChooseSeatPage extends StatelessWidget {
@@ -71,12 +72,102 @@ class ChooseSeatPage extends StatelessWidget {
       );
     }
 
+    Widget selectSeat() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.symmetric(vertical: 30),
+        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 22),
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Column(
+          children: [
+            //NOTE:SEAT INDICATOR
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 48,
+                  width: 48,
+                  child: Center(
+                    child: Text(
+                      "A",
+                      style: greyTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 48,
+                  width: 48,
+                  child: Center(
+                    child: Text(
+                      "B",
+                      style: greyTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 48,
+                  width: 48,
+                  child: Text(
+                    " ",
+                  ),
+                ),
+                Container(
+                  height: 48,
+                  width: 48,
+                  child: Center(
+                    child: Text(
+                      "C",
+                      style: greyTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 48,
+                  width: 48,
+                  child: Center(
+                    child: Text(
+                      "D",
+                      style: greyTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            //NOTE : SEAT 1\
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SeatItem(),
+                SeatItem(),
+                Container(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: Text(
+                      "1",
+                      style: greyTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                ),
+                SeatItem(),
+                SeatItem(),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
         body: ListView(
       padding: EdgeInsets.symmetric(horizontal: defaultMargin),
       children: [
         title(),
         setStatus(),
+        selectSeat(),
       ],
     ));
   }
